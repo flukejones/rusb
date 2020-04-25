@@ -254,6 +254,7 @@ impl<T: UsbContext> DeviceHandle<T> {
     /// * `Pipe` if the endpoint halted.
     /// * `NoDevice` if the device has been disconnected.
     /// * `Io` if the transfer encountered an I/O error.
+    #[inline]
     pub fn write_interrupt(
         &self,
         endpoint: u8,
@@ -309,6 +310,7 @@ impl<T: UsbContext> DeviceHandle<T> {
     /// * `Overflow` if the device offered more data.
     /// * `NoDevice` if the device has been disconnected.
     /// * `Io` if the transfer encountered an I/O error.
+    #[inline]
     pub fn read_bulk(
         &self,
         endpoint: u8,

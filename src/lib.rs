@@ -3,6 +3,7 @@
 pub use libusb1_sys::constants;
 
 pub use crate::{
+    async_io::{AsyncGroup, Transfer, TransferStatus},
     config_descriptor::{ConfigDescriptor, Interfaces},
     context::{Context, GlobalContext, Hotplug, LogLevel, Registration, UsbContext},
     device::Device,
@@ -29,6 +30,7 @@ mod test_helpers;
 
 #[macro_use]
 mod error;
+mod async_io;
 mod version;
 
 mod context;
